@@ -4,7 +4,7 @@
 #include "vec.h"
 
 #define SAMPLE_RATE (48000)
-#define SAMPLE_PERBUFFER (4096)
+#define SAMPLE_PERBUFFER (2048)
 #define BUFFER_SIZE SAMPLE_RATE
 #define TABLE_SIZE SAMPLE_RATE*2
 

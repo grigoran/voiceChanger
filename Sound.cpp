@@ -12,17 +12,18 @@ Sound::Sound() {
 
 
 bool Sound::start() {
+	int deviceNumber=0;
 	outputParameters.channelCount = 1;
-	outputParameters.device = 6;
+	outputParameters.device = deviceNumber;
 	outputParameters.hostApiSpecificStreamInfo = 0;
 	outputParameters.sampleFormat = paFloat32;
-	outputParameters.suggestedLatency = Pa_GetDeviceInfo(3)->defaultLowInputLatency;
+	outputParameters.suggestedLatency = Pa_GetDeviceInfo(deviceNumber)->defaultLowInputLatency;
 
 	inputParameters.channelCount = 1;
-	inputParameters.device = 13;
+	inputParameters.device = deviceNumber;
 	inputParameters.hostApiSpecificStreamInfo = 0;
 	inputParameters.sampleFormat = paFloat32;
-	inputParameters.suggestedLatency = Pa_GetDeviceInfo(5)->defaultLowInputLatency;
+	inputParameters.suggestedLatency = Pa_GetDeviceInfo(deviceNumber)->defaultLowInputLatency;
 
 	Pa_OpenStream(
 		&stream,

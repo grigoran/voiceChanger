@@ -15,12 +15,19 @@ int main() {
 	sound.start();
 
 	for (int i = 0; i < Pa_GetDeviceCount(); i++) {
-		std::cout << i << ": " << Pa_GetDeviceInfo(i)->name << std::endl;
+		std::cout << i << ": " << Pa_GetDeviceInfo(i)->name
+		<<" in:"<<Pa_GetDeviceInfo(i)->maxInputChannels
+		<<" out:"<<Pa_GetDeviceInfo(i)->maxOutputChannels
+		<<" r:"<<Pa_GetDeviceInfo(i)->defaultSampleRate
+		<<std::endl;
 	}
+	std::cout<<"type e to exit\n";
 
 	while (true)
 	{
-		//if (GetKeyState(VK_ESCAPE) & 0x8000) break;
+		char a;
+		std::cin>>a;
+		if(a=='e') break;
 	}
 
 	sound.stop();
