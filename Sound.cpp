@@ -13,13 +13,13 @@ Sound::Sound() {
 
 bool Sound::start() {
 	outputParameters.channelCount = 1;
-	outputParameters.device = 3;
+	outputParameters.device = 6;
 	outputParameters.hostApiSpecificStreamInfo = 0;
 	outputParameters.sampleFormat = paFloat32;
 	outputParameters.suggestedLatency = Pa_GetDeviceInfo(3)->defaultLowInputLatency;
 
 	inputParameters.channelCount = 1;
-	inputParameters.device = 5;
+	inputParameters.device = 13;
 	inputParameters.hostApiSpecificStreamInfo = 0;
 	inputParameters.sampleFormat = paFloat32;
 	inputParameters.suggestedLatency = Pa_GetDeviceInfo(5)->defaultLowInputLatency;
