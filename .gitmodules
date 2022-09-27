@@ -1,0 +1,3 @@
+[submodule "sfmlgui"]
+	path = sfmlgui
+	url = https://github.com/grigoran/sfmlgui.git
